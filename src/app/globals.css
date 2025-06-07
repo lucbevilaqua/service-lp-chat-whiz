@@ -23,13 +23,11 @@ body {
   overflow-x: hidden;
 }
 
-/* body {
-  color: var(--foreground);
-  background: var(--background);
+body {
   font-family: var(--font-space-grotesk);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} */
+}
 
 * {
   box-sizing: border-box;
@@ -47,3 +45,5 @@ a {
     color-scheme: light;
   }
 }
+
+
