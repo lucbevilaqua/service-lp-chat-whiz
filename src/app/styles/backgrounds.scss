@@ -1,0 +1,5 @@
+@import './bootstrap-helpers';
+
+.bg-gray-500 {
+  @include gradient-bg(#DCDCDC);
+}
