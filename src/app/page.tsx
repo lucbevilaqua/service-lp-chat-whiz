@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "./components/Header";
+import OurServices from "./components/OurServices";
 
 export default function Home() {
   return (
@@ -35,15 +36,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="row">
-          <div className="col">
-            <h2>Our Services</h2>
-            <p>
-              We specialize in automation, bots, and digital transformation,
-              empowering businesses to thrive in the digital age.
-            </p>
-          </div>
-        </section>
+        <OurServices />
       </div>
 
       <div className="container-fluid">
