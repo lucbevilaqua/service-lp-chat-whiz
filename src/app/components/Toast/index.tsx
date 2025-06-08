@@ -10,7 +10,7 @@ interface ToastProps {
 }
 
 export default function Toast({ message, onHide, show }: ToastProps) {
-  const [visible, setVisible] = useState(!!message);
+  const [visible, setVisible] = useState(false);
   const delay = 10000; // 10 segundos
 
   useEffect(() => {

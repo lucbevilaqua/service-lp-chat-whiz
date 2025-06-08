@@ -25,7 +25,7 @@ export default function OurServices() {
             </div>
             <div className="col-12 col-md">
                 <Image
-                    src="/images/cellphone-with-flutter-chat.svg"
+                    src="/images/social-medias.svg"
                     alt="System integration illustration"
                     width={300}
                     height={300}
@@ -39,7 +39,7 @@ export default function OurServices() {
             </div>
             <div className="col-12 col-md">
                 <Image
-                    src="/images/laptop-with-chat.svg"
+                    src="/images/cellphone-with-flutter-chat.svg"
                     alt="Custom conversation flow illustration"
                     width={300}
                     height={300}

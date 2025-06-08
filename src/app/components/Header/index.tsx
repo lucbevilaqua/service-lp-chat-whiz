@@ -1,6 +1,13 @@
 'use client';
 
+import { useEffect } from 'react';
+
 export default function Header() {
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require('bootstrap/dist/js/bootstrap.bundle.min.js');
+  }, []);
+
   return (
     <header>
       <nav className="navbar navbar-expand-lg position-fixed top-0 start-0 end-0 bg-white shadow-sm" aria-label="Main navigation">
@@ -24,9 +31,6 @@ export default function Header() {
                 <a className="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
-            <div className="d-flex ms-auto">
-              <button className="btn btn-black" type="button">Book now</button>
-            </div>
           </div>
         </div>
       </nav>

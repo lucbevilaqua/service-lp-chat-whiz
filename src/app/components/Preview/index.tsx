@@ -19,6 +19,7 @@ export default function Preview() {
           src="/images/laptop-with-chat.svg"
           alt="Laptop displaying a chat interface"
           fill
+          priority
           className="rounded"
           style={{ objectFit: "contain" }}
         />

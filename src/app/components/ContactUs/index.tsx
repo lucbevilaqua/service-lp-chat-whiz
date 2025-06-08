@@ -42,11 +42,11 @@ export default function ContactUs() {
   return (
     <section
       className="row p-5"
-      id="about"
-      aria-labelledby="about-brand-title"
+      id="contact"
+      aria-labelledby="contact-title"
     >
-      <div className="col-12 col-md text-center align-self-center">
-        <h2 id="about-brand-title">Contact us</h2>
+      <div className="col-12 col-md">
+        <h2 id="contact-title" className="fs-1">Contact us</h2>
         <p className="lead ff-raleway">
           Want to work together? Fill out the form and we&apos;ll be in touch soon! We&apos;ll be happy to talk to you.
         </p>
