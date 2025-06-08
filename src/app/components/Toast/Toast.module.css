@@ -1,0 +1,6 @@
+.toastContainer {
+  bottom: 2rem;
+  z-index: 99;
+  max-width: 90vw;
+  left: 50%;
+}
