@@ -21,7 +21,7 @@ export default function Preview() {
           fill
           priority
           className="rounded"
-          style={{ objectFit: "contain" }}
+          style={{ objectFit: "contain", zIndex: 1 }}
         />
       </div>
     </section>

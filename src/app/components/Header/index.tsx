@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import styles from './Header.module.scss';
 
 export default function Header() {
   useEffect(() => {
@@ -9,7 +10,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg position-fixed top-0 start-0 end-0 bg-white shadow-sm" aria-label="Main navigation">
+      <nav className={`navbar navbar-expand-lg position-fixed top-0 start-0 end-0 bg-white shadow-sm ${styles.headerContainer}`} aria-label="Main navigation">
         <div className="container-fluid">
           <a className="navbar-brand" href="#home">Chat Whiz</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
