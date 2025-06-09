@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@lhci/cli": "^0.14.0",
     "@types/bootstrap": "^5.2.10",
     "@types/node": "^20",
     "@types/react": "^19",
