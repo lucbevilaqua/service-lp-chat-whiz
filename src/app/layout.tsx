@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Raleway } from "next/font/google";
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
+import './styles/bootstrap-base.scss';
 import './styles/index.scss';
 import "./globals.css";
 
