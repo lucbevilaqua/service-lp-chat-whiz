@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Raleway } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import './styles/bootstrap-base.scss';
 import './styles/index.scss';
 import "./globals.css";
@@ -133,6 +134,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${spaceGrotesk.variable} ${raleway.variable}`} suppressHydrationWarning>
         {children}
+        <Analytics />
       </body>
     </html>
   );
