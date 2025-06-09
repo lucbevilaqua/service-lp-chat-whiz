@@ -9,6 +9,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid data", details: parse.error.errors }, { status: 400 });
   }
 
-  // TODO:integrar com a Google Sheets API usando parse.data
+  await fetch('https://script.google.com/macros/s/AKfycbxpv36kAFole5dL0Tu6NhHP8DTQg6SboHFxfs_utbn6sZw77BNMPJNvk-psewUx8TpxDg/exec',
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(parse.data),
+    });
   return NextResponse.json({ success: true });
 }
