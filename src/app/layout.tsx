@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     siteName: "Chat Whiz",
     images: [
       {
-        url: "/icons/logo.ico",
+        url: "/images/og-banner.jpg",
         width: 800,
         height: 600,
         alt: "Chat Whiz - Automation and AI Bots",
@@ -102,9 +102,9 @@ export const metadata: Metadata = {
   },
   robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   icons: {
-    icon: "/icons/logo.ico",
-    shortcut: "/icons/logo.ico",
-    apple: "/icons/logo.ico",
+    icon: "/icons/favicon.ico",
+    shortcut: "/icons/favicon.ico",
+    apple: "/icons/favicon.ico",
   },
   metadataBase: new URL("https://chat-whiz.com"),
   authors: [

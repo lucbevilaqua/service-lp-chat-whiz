@@ -1,23 +1,9 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Toast from "../Toast";
-
-const ContactSchema = z.object({
-  fullName: z.string().min(1, "Full name is required"),
-  companyName: z.string().min(1, "Company name is required"),
-  contact: z
-    .string()
-    .regex(/^\+\d{1,3}\s?\d{4,}$/, "Enter a valid phone number with country code")
-    .optional()
-    .or(z.literal("")),
-  email: z.string().email("Enter a valid email"),
-  message: z.string().optional(),
-});
-
-type ContactForm = z.infer<typeof ContactSchema>;
+import { ContactForm, ContactSchema } from "@/app/schemas/contactSchema";
 
 export default function ContactUs() {
   const {
@@ -30,9 +16,20 @@ export default function ContactUs() {
   });
 
   const onSubmit = async (data: ContactForm) => {
-    // TODO: enviar dados para o form
-    console.log("Form submitted:", data);
-    reset();
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        reset();
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   const handleHideToast = () => {
@@ -86,21 +83,6 @@ export default function ContactUs() {
             )}
           </div>
           <div className="mb-3">
-            <label htmlFor="contact" className="form-label">
-              Contact (Phone with country code)
-            </label>
-            <input
-              id="contact"
-              type="tel"
-              className={`form-control${errors.contact ? " is-invalid" : ""}`}
-              placeholder="+55 11999999999"
-              {...register("contact")}
-            />
-            {errors.contact && (
-              <div className="invalid-feedback" aria-live="polite">{errors.contact.message}</div>
-            )}
-          </div>
-          <div className="mb-3">
             <label htmlFor="email" className="form-label">
               Email *
             </label>
@@ -114,6 +96,21 @@ export default function ContactUs() {
             />
             {errors.email && (
               <div className="invalid-feedback" aria-live="polite">{errors.email.message}</div>
+            )}
+          </div>
+          <div className="mb-3">
+            <label htmlFor="contact" className="form-label">
+              Contact (Phone with country code)
+            </label>
+            <input
+              id="contact"
+              type="tel"
+              className={`form-control${errors.contact ? " is-invalid" : ""}`}
+              placeholder="+55 11999999999"
+              {...register("contact")}
+            />
+            {errors.contact && (
+              <div className="invalid-feedback" aria-live="polite">{errors.contact.message}</div>
             )}
           </div>
           <div className="mb-3">
