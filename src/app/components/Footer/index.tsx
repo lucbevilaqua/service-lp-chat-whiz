@@ -1,8 +1,8 @@
-'use client';
+import Copywrite from "./Copywrite";
+
+export const dynamic = "force-static";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer
       className="text-center py-4 bg-light mt-5"
@@ -10,9 +10,7 @@ export default function Footer() {
       aria-label="Site footer"
     >
       <div>
-        <p className="mb-1">
-          &copy; {currentYear} <span className="fw-bold">Chat Whiz</span>. All rights reserved.
-        </p>
+        <Copywrite />
         <address className="mb-0" style={{ fontStyle: "normal" }}>
           Contact us:
           <a

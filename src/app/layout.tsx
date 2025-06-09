@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Raleway } from "next/font/google";
-// import 'bootstrap/dist/css/bootstrap.css';
 import './styles/bootstrap-base.scss';
 import './styles/index.scss';
 import "./globals.css";
@@ -70,13 +69,13 @@ export const metadata: Metadata = {
     siteName: "Chat Whiz",
     images: [
       {
-        url: "/images/og-banner.jpg",
+        url: "/images/opengraph-image.jpg",
         width: 800,
         height: 600,
         alt: "Chat Whiz - Automation and AI Bots",
       },
       {
-        url: "/images/og-banner-2.jpg",
+        url: "/images/opengraph-image-2.jpg",
         width: 1200,
         height: 630,
         alt: "Chat Whiz - Intelligent Automation for Business",
@@ -91,7 +90,7 @@ export const metadata: Metadata = {
     title: "Chat Whiz | Intelligent Automation & AI Bots for Business",
     description:
       "Automate your business with Chat Whiz. AI-powered bots for WhatsApp, Salesforce, CRMs, ERPs, and more. Boost support, sales, and operations.",
-    images: ["/images/og-banner.jpg"],
+    images: ["/images/opengraph-image.jpg"],
     creator: "@chatwhiz",
   },
   alternates: {
@@ -102,11 +101,6 @@ export const metadata: Metadata = {
     },
   },
   robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-  icons: {
-    icon: "/icons/favicon.ico",
-    shortcut: "/icons/favicon.ico",
-    apple: "/icons/favicon.ico",
-  },
   metadataBase: new URL("https://chat-whiz.com"),
   authors: [
     { name: "Chat Whiz", url: "https://chat-whiz.com" },

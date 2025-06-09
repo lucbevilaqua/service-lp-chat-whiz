@@ -4,8 +4,11 @@
       "url": [
         "http://localhost:3000/"
       ],
-      "startServerCommand": "npm run start",
-      "numberOfRuns": 3
+      "startServerCommand": "npm run dev",
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "desktop"
+      }
     },
     "assert": {
       "assertions": {

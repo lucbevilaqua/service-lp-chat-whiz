@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+export const dynamic = "force-static";
+
 export default function Preview() {
   return (
     <section className="row mt-5" id="home" aria-labelledby="preview-title">

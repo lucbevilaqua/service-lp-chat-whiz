@@ -6,6 +6,8 @@ import AboutOurBrand from "./components/AboutOurBrand";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 
+export const dynamic = "force-static";
+
 export default function Home() {
   return (
     <>
