@@ -43,9 +43,9 @@ export default function ContactUs() {
       aria-labelledby="contact-title"
     >
       <div className="col-12 col-md">
-        <h2 id="contact-title" className="fs-1">Contact us</h2>
+        <h2 id="contact-title" className="fs-1">Ready to Automate Your Business?</h2>
         <p className="lead ff-raleway">
-          Want to work together? Fill out the form and we&apos;ll be in touch soon! We&apos;ll be happy to talk to you.
+          Contact us today to get a custom AI-powered WhatsApp bot and start transforming your customer engagement!
         </p>
       </div>
       <div className="col-12 col-md">
